@@ -1,19 +1,27 @@
-import { ButtonIcon, SearchBox } from '.././MainStyles/Styles';
+import { ButtonIcon, Input, Form, SearchBox } from '../MainStyles/Styles';
 import { BsSearch } from 'react-icons/bs';
-import SearchForm from './SearchForm';
-import SearchInput from './SearchInput';
 import PropTypes from 'prop-types';
 
 export const SearchBar = ({ onSubmit }) => (
   <SearchBox>
-    <SearchForm onSubmit={onSubmit}>
-      <SearchInput />
+    <Form onSubmit={onSubmit}>
+      <Input
+        type="text"
+        name="movieName"
+        title="May contain only letters, apostrophe, dash and spaces."
+        required
+        autoComplete="off"
+        autoFocus
+        placeholder="Search movie..."
+      />
       <ButtonIcon type="submit" aria-label="search button">
         <BsSearch />
       </ButtonIcon>
-    </SearchForm>
+    </Form>
   </SearchBox>
 );
+
 SearchBar.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
+

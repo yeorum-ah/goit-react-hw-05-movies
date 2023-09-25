@@ -3,7 +3,7 @@ import { MovieList, MovieLink } from 'Pages/Home/Home.styled';
 import { useState, useEffect } from 'react';
 import { searchMovies } from '../../components/Api/Api';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import { SearchBar } from './../../components/SearchBar/SearchBar';
+import { SearchBar } from '../../components/SearchBar/SearchBar';
 
 const Movies = () => {
   const location = useLocation();
